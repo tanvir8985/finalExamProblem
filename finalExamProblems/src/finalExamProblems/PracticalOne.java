@@ -16,19 +16,19 @@ public class PracticalOne {
         Scanner scanner = new Scanner(System.in);
         int n;
         do {
-            System.out.print("Enter the value of 'N' (1 to 500): ");
+            System.out.print("Enter the value between 1 to 500 : ");
             //in case user put a value that is not an integer
             while (!scanner.hasNextInt()) {
-                System.out.println("Please enter a valid number between 1 and 500.");
+                System.out.println("not a number!!! Please enter a valid number between 1 and 500.");
                 scanner.next();
             }
             n = scanner.nextInt();
             if (n < 1 || n > 500) {
-                System.out.println("Please enter a number between 1 and 500.");
+                System.out.println("Invalid number!!! Please enter a valid number between 1 and 500.");
             }
         } while (n < 1 || n > 500);
 
-        // Find the Nth smallest number
+        // nth number is in (n-1) position
         int nthSmallestNumber = randomNumbers[n - 1];
 
         System.out.println("The " + n + "th smallest number is: " + nthSmallestNumber);
